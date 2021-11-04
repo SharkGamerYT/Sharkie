@@ -57,7 +57,7 @@ function setup(){
       //ground.velocityX = -2
       ground.addImage("ground",groundImage);
       
-      gameOver = createSprite(width/2,height/2);
+      gameOver = createSprite(width/2,height/2)
       gameOver.addImage("gameOver",gameOver_img);
       gameOver.visible = false;
       restart = createSprite(width/2,height/2-50);
