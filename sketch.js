@@ -79,7 +79,9 @@ function setup(){
 function draw(){
       //establece un color de fondo 
       background(bg);
-      text("score " + score, 500,50);
+      textSize(40);
+      fill("black")
+      text("Score " + score, 500,50);
       if(gameState == PLAY){
         trex.changeAnimation("running", trex_running);
         score = Math.round(getFrameRate()/60) + score
@@ -91,9 +93,10 @@ function draw(){
         ground.x = 200;
         
       }
-         if(keyDown("space")&& trex.isTouching(ground)){
+         if(touches.length>0||keyDown("space")&& trex.y>=height-120){
         
         trex.velocityY = -10;
+        touches=[];
       }
         if(obstaclesGroup.isTouching(trex)){
           gameState = END;
