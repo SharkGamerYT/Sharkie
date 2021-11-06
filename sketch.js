@@ -81,7 +81,7 @@ function draw(){
       background(bg);
       textSize(40);
       fill("black")
-      text("Score " + score, 500,50);
+      text("Score " + score, width/2,height-300);
       if(gameState == PLAY){
         trex.changeAnimation("running", trex_running);
         score = Math.round(getFrameRate()/60) + score
